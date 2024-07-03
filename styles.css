@@ -19,12 +19,12 @@ body {
     border: none;
     color: white;
     text-align: center;
-    border-radius: 16px !important;
+    border-radius: 30px !important;
     box-shadow: 0 4px 8px rgb(255, 255, 255);
     transition: all 0.3s ease;
     background-color: rgba(70, 70, 70, 0.5); 
     backdrop-filter: blur(10px);
-    height: 90%;
+    height: 100%;
   }
   
   .card:hover {
@@ -79,6 +79,13 @@ body {
   .card p{
     margin-top: 0px;
     margin-bottom: 0px;
+  }
+
+  #about, 
+  #registration, 
+  #topics, 
+  #convener {
+    margin-bottom: 100px !important;
   }
   
   footer {
