@@ -24,7 +24,7 @@ body {
     transition: all 0.3s ease;
     background-color: rgba(70, 70, 70, 0.5); 
     backdrop-filter: blur(10px);
-    height: 100%;
+    height: 90%;
   }
   
   .card:hover {
@@ -67,6 +67,18 @@ body {
     border-color: #45a049;
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .card-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card p{
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   
   footer {
