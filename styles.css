@@ -86,8 +86,8 @@ h2 {
 }
 
 .btn-primary:hover {
-  background-color: #45a049;
-  border-color: #45a049;
+  background-color: #0c003e;
+  border-color: #1a0037;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
