@@ -27,20 +27,22 @@ This website provides all the necessary information about the workshop, includin
 ## Features
 
 - **Homepage**: Includes an overview of the workshop with a call-to-action for registration.
-- **Topics Section**: Lists the topics that will be covered during the workshop.
+- **Convener Section**: Provides details about the workshop and its objectives.
+- **About Section**: Lists the topics that will be covered during the workshop.
 - **Registration Section**: Provides details on the registration period, fees, and bank details for payment.
-- **Registration Form**: Allows participants to register for the workshop.
 
 ## Setup
 
 To run this project locally, follow these steps:
 
 1. Clone the repository:
+
     ```bash
     git clone https://github.com/minnukota381/quantum-computing-workshop-site.git
     ```
 
 2. Navigate to the project directory:
+
     ```bash
     cd quantum-computing-workshop-site
     ```
