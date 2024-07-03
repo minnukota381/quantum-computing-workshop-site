@@ -1,120 +1,187 @@
 body {
-    font-family: 'Rubik', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    color: #fff;
-  }
-  
-  h2 {
-    text-transform: uppercase;
-    color: white;
-  }
-  .col-md-4{
-    padding: 30px;
-  }
-  .card {
-    border: none;
-    color: white;
-    text-align: center;
-    border-radius: 30px !important;
-    box-shadow: 0 4px 8px rgb(255, 255, 255);
-    transition: all 0.3s ease;
-    background-color: rgba(70, 70, 70, 0.5); 
-    backdrop-filter: blur(10px);
-    height: 100%;
-  }
-  
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
+}
+
+/* Headings */
+h2 {
+  text-transform: uppercase;
+  color: white;
+}
+
+/* Container spacing */
+.col-md-4 {
+  padding: 30px;
+}
+
+/* Card styles */
+.card {
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  background-color: rgba(70, 70, 70, 0.5);
+  backdrop-filter: blur(10px);
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* Jumbotron styles */
+.jumbotron {
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.jumbotron h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #b700ff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #bf00ff;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+  border-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Section spacing */
+#about, 
+#registration, 
+#topics, 
+#convener {
+  margin-bottom: 100px !important;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Text alignment */
+.text-center {
+  text-align: center;
+}
+
+/* Font weight */
+.font-weight-bold {
+  font-weight: bold;
+}
+
+/* Margin styles */
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mt-4 {
+  margin-top: 1.5rem;
+}
+
+/* Input fields and form styling */
+form {
+  margin-top: 30px;
+}
+
+.form-control {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Ensure the image in the card remains circular */
+.card-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Button styling inside forms */
+.form-control:focus {
+  border-color: #bf00ff;
+  box-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
+}
+
+/* Responsive design adjustments */
+@media (max-width: 767px) {
   .jumbotron {
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
+      padding-top: 60px;
+      padding-bottom: 60px;
   }
-  
-  .jumbotron h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 20px;
+
+  .card {
+      margin-bottom: 30px;
   }
-  
-  .jumbotron p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-  
+
   .btn-primary {
-    background-color: #b700ff;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    border-color: #bf00ff;
-    transition: all 0.3s ease;
-    display: block;
+      width: 100%;
   }
-  
-  .btn-primary:hover {
-    background-color: #45a049;
-    border-color: #45a049;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+}
 
-  .card-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
+/* Additional spacing for sections */
+.section-padding {
+  padding: 60px 0;
+}
 
-  .card p{
-    margin-top: 0px;
-    margin-bottom: 0px;
-  }
-
-  #about, 
-  #registration, 
-  #topics, 
-  #convener {
-    margin-bottom: 100px !important;
-  }
-  
-  footer {
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  
-  @media (max-width: 767px) {
-    .jumbotron {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-  }
-  
-  .text-center {
-    text-align: center;
-  }
-  
-  .font-weight-bold {
-    font-weight: bold;
-  }
-  
-  .mb-4 {
-    margin-bottom: 1.5rem;
-  }
-  
-  .mt-4 {
-    margin-top: 1.5rem;
-  }
+/* Custom icon styles */
+.icon {
+  color: #bf00ff;
+  margin-right: 10px;
+}
