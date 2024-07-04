@@ -40,6 +40,7 @@ box-shadow: 0 4px 8px rgb(255, 255, 255);
 transition: all 0.3s ease;
 background-color: rgba(70, 70, 70, 0.5);
 backdrop-filter: blur(10px);
+-webkit-backdrop-filter: blur(10px);
 height: 100%;
 width: 100%;
 }
@@ -66,7 +67,7 @@ margin-bottom: 0px;
 }
 
 .jumbotron {
-background: rgba(0, 0, 0, 0.6);
+background: rgba(0, 0, 0, 0.37);
 color: white;
 text-align: center;
 padding-top: 100px;
