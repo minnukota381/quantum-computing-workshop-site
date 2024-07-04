@@ -1,188 +1,189 @@
+/* Custom adjustments for card widths */
 @media (min-width: 992px) {
   .col-lg-6 {
-      flex: 0 0 50%;
-      max-width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
   }
 }
 
 @media (max-width: 991.98px) {
   .col-lg-6 {
-      flex: 0 0 100%;
-      max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
   }
 }
 
+/* Other existing CSS rules */
 body {
-font-family: 'Rubik', sans-serif;
-margin: 0;
-padding: 0;
-background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
-background-size: cover;
-background-attachment: fixed;
-color: #fff;
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  color: #fff;
 }
 
 h2 {
-text-transform: uppercase;
-color: white;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 20px; /* Add margin bottom to h2 for spacing */
 }
 
 .col-md-4 {
-padding: 30px;
+  padding: 30px;
 }
 
 .card {
-border: none;
-color: white;
-text-align: center;
-border-radius: 30px !important;
-box-shadow: 0 4px 8px rgb(255, 255, 255);
-transition: all 0.3s ease;
-background-color: rgba(70, 70, 70, 0.5);
-backdrop-filter: blur(10px);
--webkit-backdrop-filter: blur(10px);
-height: 100%;
-width: 100%;
+  border: none;
+  color: white;
+  text-align: center;
+  border-radius: 30px !important;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  transition: all 0.3s ease;
+  background-color: rgba(70, 70, 70, 0.5);
+  backdrop-filter: blur(10px);
+  height: 100%;
+  width: 100%;
 }
 
 .card:hover {
-transform: translateY(-5px);
-box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .card-body {
-padding: 20px;
+  padding: 20px;
 }
 
 .card-img {
-width: 150px;
-height: 150px;
-border-radius: 50%;
-object-fit: cover;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .card p {
-margin-top: 0px;
-margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 .jumbotron {
-background: rgba(0, 0, 0, 0.37);
-color: white;
-text-align: center;
-height: 100vh;
-padding-top: 100px;
-padding-bottom: 100px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 40px; /* Add margin bottom to jumbotron for spacing */
 }
 
 .jumbotron h1 {
-font-size: 3rem;
-font-weight: 700;
-line-height: 1.2;
-margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
 }
 
 .jumbotron p {
-font-size: 1.2rem;
-margin-bottom: 30px;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
 }
 
 .btn-primary {
-background-color: #b700ff;
-width: 50%;
-margin-left: auto;
-margin-right: auto;
-border-color: #bf00ff;
-transition: all 0.3s ease;
-display: block;
+  background-color: #b700ff;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: #bf00ff;
+  transition: all 0.3s ease;
+  display: block;
 }
 
 .btn-primary:hover {
-background-color: #0c003e;
-border-color: #1a0037;
-transform: translateY(-2px);
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #0c003e;
+  border-color: #1a0037;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-#about, 
-#registration, 
-#topics, 
+#about,
+#registration,
+#topics,
 #convener {
-margin-bottom: 100px !important;
+  margin-bottom: 100px !important;
 }
 
 footer {
-background-color: rgba(0, 0, 0, 0.6);
-color: #fff;
-text-align: center;
-padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px; /* Add margin top to footer for spacing */
 }
 
 .text-center {
-text-align: center;
+  text-align: center;
 }
 
 .font-weight-bold {
-font-weight: bold;
+  font-weight: bold;
 }
 
 .mb-4 {
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .mt-4 {
-margin-top: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 form {
-margin-top: 30px;
+  margin-top: 30px;
 }
 
 .form-control {
-background-color: rgba(255, 255, 255, 0.1);
-border: 1px solid rgba(255, 255, 255, 0.3);
-color: white;
-border-radius: 5px;
-padding: 10px;
-margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .form-control::placeholder {
-color: rgba(255, 255, 255, 0.7);
-}
-
-.card-img {
-width: 150px;
-height: 150px;
-border-radius: 50%;
-object-fit: cover;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .form-control:focus {
-border-color: #bf00ff;
-box-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
+  border-color: #bf00ff;
+  box-shadow: 0 0 5px rgba(191, 0, 255, 0.5);
+}
+
+.qr-code-image {
+  max-width: 50%;
+  height: auto;
 }
 
 @media (max-width: 767px) {
-.jumbotron {
+  .jumbotron {
     padding-top: 60px;
     padding-bottom: 60px;
-}
+  }
 
-.card {
+  .card {
     margin-bottom: 30px;
-}
+  }
 
-.btn-primary {
+  .btn-primary {
     width: 100%;
-}
+  }
 }
 
 .section-padding {
-padding: 60px 0;
+  padding: 60px 0;
 }
 
 .icon {
-color: #bf00ff;
-margin-right: 10px;
+  color: #bf00ff;
+  margin-right: 10px;
 }
