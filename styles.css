@@ -1,4 +1,13 @@
 /* Base Styles */
+:root {
+  --primary-color: #bf00ff;
+  --primary-color-dark: #6800a4;
+  --secondary-color: #00ffff;
+  --text-color: #ffffff;
+  --bg-dark: rgba(0, 0, 0, 0.8);
+  --bg-light: rgba(255, 255, 255, 0.1);
+}
+
 body {
   font-family: 'Rubik', sans-serif;
   margin: 0;
@@ -6,8 +15,28 @@ body {
   background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
   background-size: cover;
   background-attachment: fixed;
-  color: #fff;
+  color: var(--text-color);
   line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Animated Background Overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(191, 0, 255, 0.3), rgba(0, 255, 255, 0.3));
+  z-index: -1;
+  animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 /* Typography */
@@ -19,11 +48,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h2 {
   text-transform: uppercase;
-  color: #f0f0f0;
+  color: var(--text-color);
   margin-top: 40px;
   margin-bottom: 30px;
   font-size: 2.5rem;
   letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+h2:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 p {
@@ -40,6 +89,8 @@ p {
 .section {
   padding-top: 100px;
   padding-bottom: 100px;
+  position: relative;
+  overflow: hidden;
 }
 
 .row {
@@ -54,13 +105,13 @@ p {
 
 /* Header/Jumbotron */
 .jumbotron {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(191, 0, 255, 0.4) 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(191, 0, 255, 0.4) 100%);
+  color: var(--text-color);
   text-align: center;
-  padding-top: 120px;
+  padding-top: 70px;
   padding-bottom: 120px;
   margin-bottom: 60px;
-  border-bottom: 5px solid #bf00ff;
+  border-bottom: 5px solid var(--primary-color);
   position: relative;
   overflow: hidden;
 }
@@ -77,9 +128,9 @@ p {
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
-  100% { transform: scale(1); }
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.7; }
+  100% { transform: scale(1); opacity: 0.5; }
 }
 
 .jumbotron h1 {
@@ -88,7 +139,12 @@ p {
   line-height: 1.2;
   margin-bottom: 30px;
   text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-  animation: fadeInDown 1s ease-out;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #000000, 0 0 10px #fff, 0 0 15px var(--bg-dark), 0 0 20px var(--bg-dark); }
+  to { text-shadow: 0 0 10px #000000, 0 0 20px #000000, 0 0 30px var(--primary-color-dark), 0 0 40px var(--primary-color-dark); }
 }
 
 .jumbotron p {
@@ -103,7 +159,7 @@ p {
 /* Cards */
 .card {
   border: none;
-  color: white;
+  color: var(--text-color);
   text-align: center;
   border-radius: 15px !important;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
@@ -131,6 +187,12 @@ p {
 
 .card:hover::before {
   opacity: 1;
+  animation: rotateGradient 5s linear infinite;
+}
+
+@keyframes rotateGradient {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .card:hover {
@@ -149,32 +211,60 @@ p {
   height: 180px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #bf00ff;
+  border: 4px solid var(--primary-color);
   box-shadow: 0 0 20px rgba(191,0,255,0.5);
   transition: all 0.3s ease;
+  margin-right: 20px;
 }
 
 .card:hover .card-img {
-  transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(0deg);
+  box-shadow: 0 0 30px rgba(191,0,255,0.8);
 }
 
 .card-title {
   font-size: 1.5rem;
   margin-top: 20px;
   margin-bottom: 10px;
-  color: #bf00ff;
+  color: var(--primary-color);
+  position: relative;
+  display: inline-block;
+}
+
+.card-title::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover .card-title::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .card p {
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover p {
+  opacity: 1;
 }
 
 /* Buttons */
 .btn-primary {
-  background-color: #bf00ff;
-  border-color: #bf00ff;
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
   transition: all 0.3s ease;
   padding: 12px 30px;
   font-size: 1.1rem;
@@ -202,34 +292,20 @@ p {
 }
 
 .btn-primary:hover {
-  background-color: #9900cc;
-  border-color: #9900cc;
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(191,0,255,0.6);
 }
 
-/* Sections */
-#about,
-#registration,
-#topics,
-#convener {
-  margin-bottom: 3rem !important;
-  position: relative;
-}
-
-#registration .card-text {
-  padding-bottom: 0.7rem;
-  font-size: 1.1rem;
-}
-
 /* Footer */
 footer {
-  background-color: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background-color: var(--bg-dark);
+  color: var(--text-color);
   text-align: center;
   padding: 30px 0;
   margin-top: 60px;
-  border-top: 3px solid #bf00ff;
+  border-top: 3px solid var(--primary-color);
   position: relative;
 }
 
@@ -240,27 +316,33 @@ footer::before {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, #bf00ff, transparent, #bf00ff);
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--primary-color));
+  animation: gradientFlow 5s linear infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
 }
 
 /* QR Code */
 .qr-code-image {
   max-width: 60%;
   height: auto;
-  border: 3px solid #bf00ff;
+  border: 3px solid var(--primary-color);
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(191,0,255,0.3);
   transition: all 0.3s ease;
 }
 
 .qr-code-image:hover {
-  transform: scale(1.05);
+  transform: scale(1.05) rotate(2deg);
   box-shadow: 0 8px 25px rgba(191,0,255,0.5);
 }
 
 /* Icons */
 .icon {
-  color: #bf00ff;
+  color: var(--primary-color);
   margin-right: 10px;
   font-size: 1.5rem;
   transition: all 0.3s ease;
@@ -268,6 +350,7 @@ footer::before {
 
 .card:hover .icon {
   transform: scale(1.2) rotate(360deg);
+  color: var(--secondary-color);
 }
 
 /* Animations */
@@ -281,15 +364,58 @@ footer::before {
   to { opacity: 1; transform: translateY(0); }
 }
 
+/* Hover Effects */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.5s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
 /* Responsive Design */
 @media (max-width: 767px) {
   .jumbotron {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 40px;
   }
 
   .jumbotron h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
+  }
+
+  .jumbotron p {
+    font-size: 1.2rem;
   }
 
   .card {
@@ -307,7 +433,8 @@ footer::before {
 
 @media (min-width: 768px) and (max-width: 991px) {
   .jumbotron h1 {
-    font-size: 3rem;
+    font-size: 2rem;
+
   }
 
   h2 {
@@ -320,28 +447,6 @@ footer::before {
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
-
-/* Additional Enhancements */
-::selection {
-  background-color: #bf00ff;
-  color: #fff;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #bf00ff;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #9900cc;
 }
 
 /* Accessibility */
