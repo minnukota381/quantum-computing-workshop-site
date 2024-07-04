@@ -30,6 +30,7 @@ h2 {
   background-color: rgba(70, 70, 70, 0.5);
   backdrop-filter: blur(10px);
   height: 100%;
+  width: 100%;
 }
 
 .card:hover {
