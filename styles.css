@@ -223,8 +223,8 @@ p {
   border-radius: 15px !important;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
-  background-color: rgba(102, 102, 102, 0.19);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.19);
+  backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
   height: 100%;
   width: 100%;
