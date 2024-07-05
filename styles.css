@@ -3,14 +3,54 @@
    =   Programmer | Computer Science and Engineering Student =
    =========================================================== */
 
-:root {
-  --primary-color: #bf00ff;
-  --primary-color-dark: #6800a4;
-  --secondary-color: #00ffff;
-  --text-color: #ffffff;
-  --bg-dark: rgba(0, 0, 0, 0.8);
-  --bg-light: rgba(255, 255, 255, 0.1);
-}
+   :root {
+    --primary-color: #bf00ff;
+    --primary-color-dark: #6800a4;
+    --secondary-color: #00ffff;
+    --text-color: #ffffff;
+    --bg-dark: rgba(0, 0, 0, 0.8);
+    --bg-light: rgba(255, 255, 255, 0.1);
+  
+    /* ==============================
+       =     Background Colors      =
+       ============================== */
+
+    --bg-color-1: #ff6347;
+    --bg-color-2: #4682b4;
+    --bg-color-3: #32cd32;
+    --bg-color-4: #8a2be2;
+    --bg-color-5: #ff4500;
+    --bg-color-6: #daa520;
+    --bg-color-7: #adff2f;
+    --bg-color-8: #ff69b4;
+    --bg-color-9: #1e90ff;
+    --bg-color-10: #ffd700;
+    --bg-color-11: #00ced1;
+    --bg-color-12: #8b4513;
+    --bg-color-13: #dc143c;
+    --bg-color-14: #ff8c00;
+    --bg-color-15: #9932cc;
+  
+    /* =============================
+       =     Text Colors           =
+       ============================= */
+
+    --color-1: #00bfff;
+    --color-2: #3cb371;
+    --color-3: #9400d3;
+    --color-4: #00ff7f;
+    --color-5: #ff00ff;
+    --color-6: #7b68ee;
+    --color-7: #f4a460;
+    --color-8: #00fa9a;
+    --color-9: #ff1493;
+    --color-10: #7fff00;
+    --color-11: #db7093;
+    --color-12: #4b0082;
+    --color-13: #ff7f50;
+    --color-14: #8b008b;
+    --color-15: #8b0000;
+  }  
 
 body {
   font-family: 'Rubik', sans-serif;
