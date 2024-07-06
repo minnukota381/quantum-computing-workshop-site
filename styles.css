@@ -206,7 +206,7 @@ p {
 .jumbotron p {
   font-size: 1.3rem;
   margin-bottom: 40px;
-  max-width: 800px;
+  text-align: justify;
   margin-left: auto;
   margin-right: auto;
   animation: fadeInUp 1s ease-out 0.5s both;
