@@ -52,16 +52,17 @@
     --color-15: #8b0000;
   }  
 
-body {
-  font-family: 'Rubik', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
-  background-size: cover;
-  background-attachment: fixed;
-  color: var(--text-color);
-  line-height: 1.6;
-  overflow-x: hidden;
+  body {
+    font-family: 'Rubik', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative; /* Ensure the particles.js canvas overlays the background */
 }
 
 /* ======================================
@@ -69,22 +70,33 @@ body {
    ====================================== */
 
 body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(45deg, rgba(191, 0, 255, 0.3), rgba(0, 145, 145, 0.3));
-  z-index: -1;
-  animation: gradientShift 15s ease infinite;
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(191, 0, 255, 0.3), rgba(0, 145, 145, 0.3));
+    z-index: -1;
+    animation: gradientShift 15s ease infinite;
 }
 
 @keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
+
+/* Style for particles canvas */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 
 /* ======================
    =     Typography      = 
@@ -180,7 +192,9 @@ section {
    ========================== */
 
 .jumbotron {
-  background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(191, 0, 255, 0.4) 100%);
+  background-image: url('./Assets/animated/5111951.jpg'); 
+  background-size: cover;
+  /* background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(191, 0, 255, 0.4) 100%); */
   color: var(--text-color);
   text-align: center;
   padding-top: 70px;
