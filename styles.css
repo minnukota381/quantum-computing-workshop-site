@@ -153,12 +153,13 @@ section {
   min-height: 400px; /* Adjust this value as needed */
 }
 
-.card {
-  height: 100%;
-}
-
 #convener {
   margin-bottom: 100px; /* Adjust this value as needed */
+}
+
+#convener .card{
+  height: auto;
+
 }
 
 @media (max-width: 767px) {
