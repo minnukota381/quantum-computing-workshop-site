@@ -139,23 +139,21 @@ p {
   padding: 0 15px;
 }
 
-.section {
-  padding-top: 100px;
-  padding-bottom: 100px;
+section {
+  /* margin-bottom: 80px;
+  padding-top: 50px;
+  padding-bottom: 50px; */
   position: relative;
   overflow: hidden;
 }
-section {
-  margin-bottom: 80px; /* Increase this value as needed */
-}
 
 .custom-card-width {
-  min-height: 400px; /* Adjust this value as needed */
+  min-height: 400px;
 }
 
-#convener {
-  margin-bottom: 100px; /* Adjust this value as needed */
-}
+/* #convener {
+  margin-bottom: 100px;
+} */
 
 #convener .card{
   height: auto;
@@ -211,7 +209,7 @@ section {
 }
 
 .jumbotron h1 {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 30px;
