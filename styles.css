@@ -145,7 +145,27 @@ p {
   position: relative;
   overflow: hidden;
 }
+section {
+  margin-bottom: 80px; /* Increase this value as needed */
+}
 
+.custom-card-width {
+  min-height: 400px; /* Adjust this value as needed */
+}
+
+.card {
+  height: 100%;
+}
+
+#convener {
+  margin-bottom: 100px; /* Adjust this value as needed */
+}
+
+@media (max-width: 767px) {
+  .custom-card-width {
+    margin-bottom: 30px;
+  }
+}
 .row {
   display: flex;
   flex-wrap: wrap;
