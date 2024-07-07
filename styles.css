@@ -649,6 +649,7 @@ footer::before {
   max-width: 60%;
   height: auto;
   border: 3px solid var(--primary-color);
+  margin-bottom: 50px !important ;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(191,0,255,0.3);
   transition: all 0.3s ease;
@@ -700,6 +701,36 @@ footer::before {
 .hover-glow:hover {
   text-shadow: 0 0 10px var(--primary-color);
 }
+
+/* ==========================
+   =     Registration       = 
+   ========================== */
+
+   #registration .card-title {
+    margin-bottom: 25px;
+}
+
+.qc-image {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(191, 0, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.qc-image img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: inherit;
+    box-shadow: inherit;
+}
+
 
 /* ==========================
    =     Scroll Reveal      = 
