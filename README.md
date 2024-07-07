@@ -23,6 +23,7 @@ This website provides all the necessary information about the workshop, includin
 - Bootstrap 4.5.2
 - Font Awesome 5.15.3
 - Google Fonts (Rubik)
+- Particle.js
 
 ## Features
 
@@ -30,6 +31,10 @@ This website provides all the necessary information about the workshop, includin
 - **Convener Section**: Provides details about the workshop and its objectives.
 - **About Section**: Lists the topics that will be covered during the workshop.
 - **Registration Section**: Provides details on the registration period, fees, and bank details for payment.
+- **GIF Section**: A captivating section showcasing a collection of animated GIFs related to quantum computing, with smooth scrolling and navigation buttons for an enhanced user experience.
+- **Responsive Design**: The website is fully responsive and works on various devices, ensuring a seamless user experience on desktops, tablets, and mobile phones.
+- **Smooth Scrolling**: Implemented smooth scrolling for internal links to enhance navigation.
+- **Animations**: Added animations to various elements for a more engaging user experience.
 
 ## Setup
 
