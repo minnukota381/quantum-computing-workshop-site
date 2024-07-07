@@ -55,7 +55,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function scrollGifs(direction) {
         const maxScroll = wrapper.scrollWidth - container.clientWidth;
         scrollPosition += direction * cardWidth;
-        scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
+        if (scrollPosition >= maxScroll) {
+            scrollPosition = 0;
+        }
+        if (scrollPosition < 0) {
+            scrollPosition = maxScroll;
+        }
         wrapper.style.transform = `translateX(-${scrollPosition}px)`;
     }
 
@@ -63,12 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!container) return;
         
         scrollInterval = setInterval(() => {
-            scrollPosition += 2;
+            scrollPosition += 3;
             if (scrollPosition >= wrapper.scrollWidth - container.clientWidth) {
                 scrollPosition = 0;
             }
             wrapper.style.transform = `translateX(-${scrollPosition}px)`;
-        }, 50);
+        }, 30);
     }
 
     function stopAutoScroll() {
@@ -117,6 +122,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     startAutoScroll();
-
     reveal();
 });
