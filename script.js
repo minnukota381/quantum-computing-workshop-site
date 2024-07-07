@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-
     $('a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         let target = this.hash;
@@ -45,39 +44,79 @@ document.addEventListener('DOMContentLoaded', function() {
         $('html, body').animate({scrollTop: 0}, 300);
     });
 
+    const container = document.querySelector('.scrollable-container');
+    const wrapper = document.querySelector('.gif-wrapper');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const cardWidth = 320;
+    let scrollPosition = 0;
     let scrollInterval;
 
+    function scrollGifs(direction) {
+        const maxScroll = wrapper.scrollWidth - container.clientWidth;
+        scrollPosition += direction * cardWidth;
+        scrollPosition = Math.max(0, Math.min(scrollPosition, maxScroll));
+        wrapper.style.transform = `translateX(-${scrollPosition}px)`;
+    }
+
     function startAutoScroll() {
-        const container = document.querySelector('.scrollable-container');
         if (!container) return;
         
         scrollInterval = setInterval(() => {
-            container.scrollLeft += 2;
-        }, 10);
+            scrollPosition += 2;
+            if (scrollPosition >= wrapper.scrollWidth - container.clientWidth) {
+                scrollPosition = 0;
+            }
+            wrapper.style.transform = `translateX(-${scrollPosition}px)`;
+        }, 50);
     }
 
     function stopAutoScroll() {
         clearInterval(scrollInterval);
     }
 
-    startAutoScroll();
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            scrollGifs(-1);
+        });
+        nextBtn.addEventListener('click', () => {
+            stopAutoScroll();
+            scrollGifs(1);
+        });
+    }
 
-    const container = document.querySelector('.scrollable-container');
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            stopAutoScroll();
+            scrollGifs(-1);
+        }
+        if (e.key === 'ArrowRight') {
+            stopAutoScroll();
+            scrollGifs(1);
+        }
+    });
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
     if (container) {
+        container.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoScroll();
+        });
+
+        container.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) scrollGifs(1);
+            if (touchEndX - touchStartX > 50) scrollGifs(-1);
+        });
+
         container.addEventListener('mouseenter', stopAutoScroll);
         container.addEventListener('mouseleave', startAutoScroll);
     }
 
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+    startAutoScroll();
 
-    if (prevBtn && nextBtn) {
-        prevBtn.addEventListener('click', () => {
-            container.scrollLeft -= 300; 
-        });
-
-        nextBtn.addEventListener('click', () => {
-            container.scrollLeft += 300;
-        });
-    }
+    reveal();
 });
