@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!container) return;
         
         scrollInterval = setInterval(() => {
-            scrollPosition += 3;
+            scrollPosition += 2;
             if (scrollPosition >= wrapper.scrollWidth - container.clientWidth) {
                 scrollPosition = 0;
             }

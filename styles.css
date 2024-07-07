@@ -308,6 +308,7 @@ section {
     transition: all 0.4s ease;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     animation: fadeInUp 1.5s ease-out;
     position: relative;
   }
