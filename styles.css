@@ -251,9 +251,10 @@ section {
    =================== */
 
    #gif-section {
-    padding: 100px 0;
+    padding: 120px 0;
     position: relative;
     overflow: hidden;
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
 }
 
 #gif-section::before {
@@ -263,25 +264,28 @@ section {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,%3Csvg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="%239C92AC" fill-opacity="0.05" fill-rule="evenodd"%3E%3Ccircle cx="3" cy="3" r="3"/%3E%3Ccircle cx="13" cy="13" r="3"/%3E%3C/g%3E%3C/svg%3E');
-    opacity: 0.5;
+    background: url('data:image/svg+xml,%3Csvg width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Cpath d="M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z" /%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.1;
     z-index: 0;
 }
 
 #gif-section h2 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     text-align: center;
-    margin-bottom: 50px;
-    font-weight: 700;
-    letter-spacing: 1px;
+    margin-bottom: 60px;
+    font-weight: 800;
+    letter-spacing: 2px;
     position: relative;
     z-index: 1;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    text-transform: uppercase;
 }
 
 #gif-section .scrollable-container {
     overflow-x: hidden;
     position: relative;
-    padding: 20px 0;
+    padding: 30px 0;
     z-index: 1;
 }
 
@@ -291,80 +295,88 @@ section {
 }
 
 #gif-section .gif-card {
-    flex: 0 0 300px;
-    margin-right: 30px;
-    border-radius: 15px;
+    flex: 0 0 400px;
+    margin-right: 40px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    /* background: #fff; */
+    width: 100%;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transition: all 0.4s ease;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 #gif-section .gif-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    transform: translateY(-15px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
 }
 
 #gif-section .gif-card img {
     width: 100%;
-    height: 200px;
+    height: 220px;
     object-fit: cover;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 #gif-section .gif-card:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 #gif-section .gif-card > div {
-    padding: 20px;
+    padding: 25px;
 }
 
 #gif-section .gif-card > div > p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin: 0;
     font-weight: 500;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 #gif-section .navigation {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
     position: relative;
     z-index: 1;
 }
 
 #gif-section .nav-btn {
-    background-color: #3498db;
-    color: #fff;
+    background-color: #ffffff;
+    color: #764ba2;
     border: none;
-    padding: 15px 25px;
-    font-size: 1rem;
+    padding: 18px 35px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     border-radius: 50px;
-    margin: 0 15px;
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    margin: 0 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 #gif-section .nav-btn:hover {
-    background-color: #2980b9;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(52, 152, 219, 0.4);
+    background-color: #764ba2;
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
 #gif-section .nav-btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-2px);
 }
 
 #gif-section .nav-btn:focus {
     outline: none;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5), 0 5px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 0 0 5px rgba(255,255,255,0.5), 0 15px 30px rgba(0,0,0,0.2);
 }
 
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -374,21 +386,22 @@ section {
 
 #gif-section h2,
 #gif-section .gif-card {
-    animation: fadeInUp 1s ease-out;
+    animation: fadeInUp 1.2s ease-out;
 }
 
 @media (max-width: 768px) {
     #gif-section h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     #gif-section .gif-card {
-        flex: 0 0 250px;
-        margin-right: 20px;
+        flex: 0 0 260px;
+        margin-right: 30px;
     }
 
     #gif-section .nav-btn {
-        padding: 12px 20px;
+        padding: 15px 25px;
+        font-size: 1rem;
     }
 }
 
