@@ -56,7 +56,8 @@
     font-family: 'Rubik', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg');
+    /* background-image: url('https://www.sigarch.org/wp-content/uploads/2021/08/AdobeStock_272468948-scaled.jpeg'); */
+    background-image: url('./Assets/background/jumbo.jpg');
     background-size: cover;
     background-attachment: fixed;
     color: var(--text-color);
