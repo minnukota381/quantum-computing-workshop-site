@@ -147,7 +147,7 @@ p {
    =================== */
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -217,7 +217,7 @@ section {
 }
 
 .jumbotron h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 30px;
@@ -237,6 +237,12 @@ section {
   margin-left: auto;
   margin-right: auto;
   animation: fadeInUp 1s ease-out 0.5s both;
+}
+
+.workshop-img {
+  height: 200px; /* Set a specific height */
+  width: auto; /* Width adjusts automatically */
+  object-fit: cover; /* Ensures images are scaled nicely */
 }
 
 /* ===================
