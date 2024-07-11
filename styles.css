@@ -241,10 +241,18 @@ section {
   animation: fadeInUp 1s ease-out 0.5s both;
 }
 
+.workshop-imgup{
+  height: 200px;
+  width: 250px;
+  object-fit: cover;
+  border-radius: 30px !important;
+}
+
 .workshop-img {
-  height: 200px; /* Set a specific height */
-  width: auto; /* Width adjusts automatically */
-  object-fit: cover; /* Ensures images are scaled nicely */
+  height: 200px;
+  width: auto;
+  object-fit: cover;
+  border-radius: 20px !important;
 }
 
 /* ===================
