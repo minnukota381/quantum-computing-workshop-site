@@ -186,12 +186,12 @@ section {
    ========================== */
 
 .jumbotron {
-  background-image: url('./Assets/background/jumb.jpg'); 
+  background-image: url('./Assets/background/12980759_5101597.jpg'); 
   background-size: cover;
   /* background: linear-gradient(135deg, var(--bg-dark) 0%, rgba(191, 0, 255, 0.4) 100%); */
   color: var(--text-color);
   text-align: center;
-  padding-top: 70px;
+  /* padding-top: 70px; */
   padding-bottom: 120px;
   margin-bottom: 60px;
   border-bottom: 5px solid var(--primary-color);
@@ -231,11 +231,13 @@ section {
 }
 
 .jumbotron p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 40px;
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   animation: fadeInUp 1s ease-out 0.5s both;
 }
 
