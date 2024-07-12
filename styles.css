@@ -236,8 +236,8 @@ section {
   text-align: justify;
   margin-left: auto;
   margin-right: auto;
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   animation: fadeInUp 1s ease-out 0.5s both;
 }
 
@@ -305,8 +305,9 @@ section {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
     transition: all 0.4s ease;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+
     animation: fadeInUp 1.5s ease-out;
     position: relative;
   }
@@ -474,8 +475,9 @@ section {
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
   transition: all 0.3s ease;
   background-color: rgba(0, 0, 0, 0.19);
-  backdrop-filter: blur(100px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(100px);
+
   height: 100%;
   width: 100%;
   overflow: hidden;
