@@ -246,6 +246,8 @@ section {
   width: 250px;
   object-fit: cover;
   border-radius: 30px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .workshop-img {
